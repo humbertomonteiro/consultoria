@@ -1,0 +1,28 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    height: 60px;
+    background-color: var(--primary);
+    animation: slideBottom .7s ease forwards;
+}
+
+header a {
+    color: var(--text);
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    font-size: 1.5rem;
+}
+
+.btn-login {
+    background-color: var(--text);
+    padding: 7px 30px;
+    border-radius: 4px;
+    color: #013750;
+}
+

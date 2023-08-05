@@ -1,0 +1,143 @@
+.container-home {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-presentation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 70vh;
+    overflow: hidden;
+}
+
+.container-presentation img {
+     filter: blur(5px);
+     opacity: 0;
+     animation: slideBottom .7s ease forwards;
+     animation-delay: .2s;
+}
+
+.presentation-text {
+    position: absolute;
+    top: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 650px;
+    max-width: 95%;
+    max-height: 270px;
+    background-image: linear-gradient(to bottom, var(--primary), var(--secundary));
+    color: var(--text);
+    border-radius: 4px;
+    padding: 40px 25px;
+    opacity: 0;
+    animation: slideBottom .7s ease forwards;
+    animation-delay: .5s;
+}
+
+.presentation-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.presentation-text p {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.presentation-text button {
+    padding: 12px 30px;
+    border: 0;
+    border-radius: 4px;
+    background-color: var(--text);
+}
+
+.home-boxes {
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    top: 450px;
+    gap: 10px;
+}
+
+.home-boxes .box {
+    background-image: linear-gradient(to bottom, var(--primary), var(--secundary));
+    color: var(--text);
+    padding: 20px;
+    width: 22%;
+    min-width: 170px;
+    border-radius: 4px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.home-boxes .box1,
+.home-boxes .box2,
+.home-boxes .box3,
+.home-boxes .box4 {
+    opacity: 0;
+    animation: slideTop .8s ease forwards;
+}
+
+.home-boxes .box1 {
+    animation-delay: .3s;
+}
+
+.home-boxes .box2 {
+    animation-delay: .6s;
+}
+
+.home-boxes .box3 {
+    animation-delay: .9s;
+}
+
+.home-boxes .box4 {
+    animation-delay: 1.2s;
+}
+
+.home-boxes .box h2 {
+    font-size: 1.7rem;
+    margin-bottom: 6px;
+}
+
+.home-boxes .box p {
+    font-size: .9rem;
+}
+
+
+
+@media (max-width: 769px) {
+    .home-boxes {
+        position: relative;
+        top: 20px;
+        flex-wrap: wrap;
+    }
+}
+
+
+
+@media (max-width: 480px) {
+
+
+    .presentation-text {
+        padding: 20px 10px;
+        top: 100px;
+    }
+
+    .presentation-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .presentation-text p {
+        font-size: .9rem;
+        margin-bottom: 10px ;
+    }
+
+    .home-boxes {
+        top: 30px;
+    }
+
+}
